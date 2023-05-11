@@ -66,6 +66,7 @@ namespace Script
                         {
                             UIStateManger.Instance.ChangeState(UIState.Modifying);
                             ModificationPanel.Instance.SelectSphere(sphereTarget);
+                            PlayerMovementController.Instance.TriggerMoveCamera(sphereTarget.sphereIdentifier + 1);
                             // _switchOptionsUI.CurrentSelectedId = sphereTarget.sphereIdentifier;
                             // sphereTarget.ChangeMaterial();
                         }

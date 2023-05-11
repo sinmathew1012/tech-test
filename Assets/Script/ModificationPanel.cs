@@ -78,5 +78,6 @@ public class ModificationPanel : MonoBehaviour
     public void OnClickGoBack()
     {
         UIStateManger.Instance.ChangeState(UIState.Idle);
+        PlayerMovementController.Instance.TriggerMoveCamera(0);
     }
 }
