@@ -6,12 +6,22 @@ namespace Script
 {
     public class LevelSwitcher : MonoBehaviour
     {
+        public static LevelSwitcher Instance;
         public string[] levelNames;
         private int currentLevelIndex = -1;
 
         private void Awake()
         {
-            DontDestroyOnLoad(gameObject);
+            if (Instance == null)
+            {
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
         }
 
         private void Start()
@@ -32,12 +42,17 @@ namespace Script
             LoadScene(levelNames[currentLevelIndex]);
         }
 
-        private void Update()
+        public string GetNextLevelName()
         {
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                SwitchLevel();
-            }
+            int nextLevel = (currentLevelIndex + 1) % levelNames.Length;
+            return levelNames[nextLevel];
         }
+        // private void Update()
+        // {
+        //     if (Input.GetKeyDown(KeyCode.L))
+        //     {
+        //         SwitchLevel();
+        //     }
+        // }
     }
 }

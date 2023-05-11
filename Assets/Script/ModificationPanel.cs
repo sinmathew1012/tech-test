@@ -20,7 +20,7 @@ public class ModificationPanel : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -29,11 +29,12 @@ public class ModificationPanel : MonoBehaviour
         }
     }
 
-    private void OnEnable()
+    private void Start()
     {
         UIStateManger.Instance.OnUIStateChanged += HandleUIStateChanged;
+        UIStateManger.Instance.ChangeState(UIState.Idle);
     }
-    private void OnDisable()
+    private void OnDestroy()
     {
         UIStateManger.Instance.OnUIStateChanged -= HandleUIStateChanged;
     }
@@ -51,13 +52,17 @@ public class ModificationPanel : MonoBehaviour
         }
     }
     
-    public void AssignSelection(SphereController sphereController)
+    public void SelectSphere(SphereController sphereController)
     {
-        Debug.Log(SphereStateManager.Instance);
         CurrentSelectedId = sphereController.sphereIdentifier;
         for (int i = 0; i < Text_MaterialOptions.Length; i++)
         {
             Text_MaterialOptions[i].text = SphereStateManager.Instance.MaterialStates[CurrentSelectedId][i].name;
+        }
+        for (int i = 0; i < Text_MeshOptions.Length; i++)
+        {
+            // Text_MeshOptions[i].text = SphereStateManager.Instance.MeshStates[CurrentSelectedId][i].name;
+            Text_MeshOptions[i].text = "Mesh " + i;
         }
     }
     

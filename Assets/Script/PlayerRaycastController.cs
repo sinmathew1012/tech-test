@@ -65,7 +65,7 @@ namespace Script
                         if (sphereTarget)
                         {
                             UIStateManger.Instance.ChangeState(UIState.Modifying);
-                            ModificationPanel.Instance.AssignSelection(sphereTarget);
+                            ModificationPanel.Instance.SelectSphere(sphereTarget);
                             // _switchOptionsUI.CurrentSelectedId = sphereTarget.sphereIdentifier;
                             // sphereTarget.ChangeMaterial();
                         }

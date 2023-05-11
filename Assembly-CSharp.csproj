@@ -48,6 +48,7 @@
      <Compile Include="Assets/Script/SphereStateManager.cs" />
      <Compile Include="Assets/Script/ModificationPanel.cs" />
      <Compile Include="Assets/Script/UIStateManger.cs" />
+     <Compile Include="Assets/Script/IdlePanel.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
