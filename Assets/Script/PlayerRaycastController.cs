@@ -1,6 +1,7 @@
 using System;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 
 namespace Script
@@ -20,7 +21,7 @@ namespace Script
 
         private void Update()
         {
-            if (Input.touchCount > 0)
+            if (Input.touchCount > 0 && !EventSystem.current.IsPointerOverGameObject())
             {
                 Touch touch = Input.GetTouch(0);
 
@@ -35,7 +36,7 @@ namespace Script
                     ProcessTouch(touch.position);
                 }
             }
-            else if (Input.GetMouseButtonDown(0))
+            else if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 ProcessTouch(Input.mousePosition);
             }
@@ -51,7 +52,24 @@ namespace Script
                 {
                     if (hit.transform.gameObject.name != "Plane")
                     {
-                        Destroy(hit.transform.gameObject);
+                        SphereController sphereTarget;
+                        try
+                        {
+                            sphereTarget = hit.transform.GetComponent<SphereController>();
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e);
+                            throw;
+                        }
+                        if (sphereTarget)
+                        {
+                            UIStateManger.Instance.ChangeState(UIState.Modifying);
+                            ModificationPanel.Instance.AssignSelection(sphereTarget);
+                            // _switchOptionsUI.CurrentSelectedId = sphereTarget.sphereIdentifier;
+                            // sphereTarget.ChangeMaterial();
+                        }
+                        // Destroy(hit.transform.gameObject);
                     }
                     // Debug.Log(hit.transform.gameObject.name);
                 }

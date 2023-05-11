@@ -11,6 +11,7 @@ public class SphereStateManager : MonoBehaviour
     private int[] meshIndices = new int[4];
     private void Awake()
     {
+        #region singleton logic
         if (Instance == null)
         {
             Instance = this;
@@ -21,6 +22,7 @@ public class SphereStateManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        #endregion
 
         for (int i = 0; i < 4; i++)
         {

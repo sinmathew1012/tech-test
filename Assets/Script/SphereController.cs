@@ -2,6 +2,7 @@ using System;
 using System.Security.Cryptography;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 public class SphereController : MonoBehaviour
@@ -12,7 +13,8 @@ public class SphereController : MonoBehaviour
     public Mesh DefaultMesh;
     public Mesh[] AdditionalMeshes;
     
-    private SphereStateManager _sphereStateManager; 
+    private SphereStateManager _sphereStateManager;
+    private ModificationPanel modificationPanel;
     private Renderer _renderer;
     private MeshFilter _meshFilter;
     
@@ -25,6 +27,7 @@ public class SphereController : MonoBehaviour
     void Start()
     {
         _sphereStateManager = SphereStateManager.Instance;
+        modificationPanel = ModificationPanel.Instance;
         _renderer = GetComponent<Renderer>();
         _meshFilter = GetComponent<MeshFilter>();
         if (!_sphereStateManager.GetHasCompositeState(sphereIdentifier))
@@ -42,6 +45,15 @@ public class SphereController : MonoBehaviour
         meshIndex = _sphereStateManager.GetMeshIndex(sphereIdentifier);
 
         ApplyMaterialAndMesh();
+        modificationPanel.OnMaterialOptionClicked += ChangeMaterial;
+        modificationPanel.OnMeshOptionClicked += ChangeMesh;
+        
+    }
+
+    private void OnDestroy()
+    {
+        modificationPanel.OnMaterialOptionClicked -= ChangeMaterial;
+        modificationPanel.OnMeshOptionClicked -= ChangeMesh;
     }
 
     private void CompositeMaterialsAndMeshes()
@@ -63,26 +75,29 @@ public class SphereController : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            materialIndex = (materialIndex + 1) % materials.Length;
-            ApplyMaterialAndMesh();
-            _sphereStateManager.SetMaterialIndex(sphereIdentifier, materialIndex);
-        }
-        
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            meshIndex = (meshIndex + 1) % meshes.Length;
-            ApplyMaterialAndMesh();
-            _sphereStateManager.SetMeshIndex(sphereIdentifier, meshIndex);
-        }
-    }
-
     void ApplyMaterialAndMesh()
     {
         _renderer.material = materials[materialIndex];
         _meshFilter.mesh = meshes[meshIndex];
+    }
+
+    public void ChangeMesh(int observerId, int optionId)
+    {
+        if (observerId != sphereIdentifier)
+            return;
+        meshIndex = optionId;
+        // meshIndex = (meshIndex + 1) % meshes.Length;
+        ApplyMaterialAndMesh();
+        _sphereStateManager.SetMeshIndex(sphereIdentifier, meshIndex);
+    }
+
+    public void ChangeMaterial(int observerId, int optionId)
+    {
+        if (observerId != sphereIdentifier)
+            return;
+        materialIndex = optionId;
+        // materialIndex = (materialIndex + 1) % materials.Length;
+        ApplyMaterialAndMesh();
+        _sphereStateManager.SetMaterialIndex(sphereIdentifier, materialIndex);
     }
 }
