@@ -45,8 +45,8 @@
      <Compile Include="Assets/Script/SphereController.cs" />
      <Compile Include="Assets/Script/LevelSwitcher.cs" />
      <Compile Include="Assets/Script/PlayerMovementController.cs" />
-     <Compile Include="Assets/Script/SphereStateManager.cs" />
      <Compile Include="Assets/Script/ModificationPanel.cs" />
+     <Compile Include="Assets/Script/SphereStateManager.cs" />
      <Compile Include="Assets/Script/UIStateManger.cs" />
      <Compile Include="Assets/Script/IdlePanel.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
@@ -772,6 +772,24 @@
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SpatialTracking">
+     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.SpatialTracking">
+     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>

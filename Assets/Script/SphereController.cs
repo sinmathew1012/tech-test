@@ -8,10 +8,14 @@ using UnityEngine.EventSystems;
 public class SphereController : MonoBehaviour
 {
     public int sphereIdentifier;
+    [Header("Material")]
     public Material DefaultMaterial;
     public Material[] AdditionalMaterials;
+    [Header("Mesh")]
     public Mesh DefaultMesh;
+    public Sprite DefaultMeshIcon;
     public Mesh[] AdditionalMeshes;
+    public Sprite[] AdditionalMeshIcons;
     
     private SphereStateManager _sphereStateManager;
     private ModificationPanel modificationPanel;
@@ -20,6 +24,7 @@ public class SphereController : MonoBehaviour
     
     private Material[] materials;
     private Mesh[] meshes;
+    private Sprite[] meshIcons;
     
     private int materialIndex = 0;
     private int meshIndex = 0;
@@ -35,12 +40,16 @@ public class SphereController : MonoBehaviour
             CompositeMaterialsAndMeshes();
             _sphereStateManager.SetMaterialStates(sphereIdentifier, materials);
             _sphereStateManager.SetMeshStates(sphereIdentifier, meshes);
+            _sphereStateManager.SetMeshIcons(sphereIdentifier, meshIcons);
             _sphereStateManager.SetHasCompositeState(sphereIdentifier);
         }
+        else
+        {
+            materials = _sphereStateManager.GetMaterialStates(sphereIdentifier);
+            meshes = _sphereStateManager.GetMeshStates(sphereIdentifier);
+            meshIcons = _sphereStateManager.GetMeshIcons(sphereIdentifier);
+        }
 
-        materials = _sphereStateManager.GetMaterialStates(sphereIdentifier);
-        meshes = _sphereStateManager.GetMeshStates(sphereIdentifier);
-        
         materialIndex = _sphereStateManager.GetMaterialIndex(sphereIdentifier);
         meshIndex = _sphereStateManager.GetMeshIndex(sphereIdentifier);
 
@@ -69,9 +78,12 @@ public class SphereController : MonoBehaviour
         int numMeshes = 1 + AdditionalMeshes.Length;
         meshes = new Mesh[numMeshes];
         meshes[0] = DefaultMesh;
+        meshIcons = new Sprite[numMeshes];
+        meshIcons[0] = DefaultMeshIcon;
         for (int i = 0; i < AdditionalMeshes.Length; i++)
         {
             meshes[i + 1] = AdditionalMeshes[i];
+            meshIcons[i + 1] = AdditionalMeshIcons[i];
         }
     }
 
@@ -86,7 +98,6 @@ public class SphereController : MonoBehaviour
         if (observerId != sphereIdentifier)
             return;
         meshIndex = optionId;
-        // meshIndex = (meshIndex + 1) % meshes.Length;
         ApplyMaterialAndMesh();
         _sphereStateManager.SetMeshIndex(sphereIdentifier, meshIndex);
     }
@@ -96,7 +107,6 @@ public class SphereController : MonoBehaviour
         if (observerId != sphereIdentifier)
             return;
         materialIndex = optionId;
-        // materialIndex = (materialIndex + 1) % materials.Length;
         ApplyMaterialAndMesh();
         _sphereStateManager.SetMaterialIndex(sphereIdentifier, materialIndex);
     }

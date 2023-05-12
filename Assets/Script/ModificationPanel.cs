@@ -1,6 +1,5 @@
 using System;
 using Script;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 public class ModificationPanel : MonoBehaviour
@@ -12,8 +11,9 @@ public class ModificationPanel : MonoBehaviour
     public event Action<int, int> OnMeshOptionClicked;
 
     [SerializeField] private GameObject GO_ModificationPanel;
-    [SerializeField] private TMP_Text[] Text_MaterialOptions = new TMP_Text[4];
-    [SerializeField] private TMP_Text[] Text_MeshOptions = new TMP_Text[4];
+
+    [SerializeField] private Image[] Img_MaterialOptions = new Image[4];
+    [SerializeField] private Image[] Img_MeshOptions = new Image[4];
 
     private void Awake()
     {
@@ -55,14 +55,13 @@ public class ModificationPanel : MonoBehaviour
     public void SelectSphere(SphereController sphereController)
     {
         CurrentSelectedId = sphereController.sphereIdentifier;
-        for (int i = 0; i < Text_MaterialOptions.Length; i++)
+        for (int i = 0; i < Img_MaterialOptions.Length; i++)
         {
-            Text_MaterialOptions[i].text = SphereStateManager.Instance.MaterialStates[CurrentSelectedId][i].name;
+            Img_MaterialOptions[i].material = SphereStateManager.Instance.MaterialStates[CurrentSelectedId][i];
         }
-        for (int i = 0; i < Text_MeshOptions.Length; i++)
+        for (int i = 0; i < Img_MeshOptions.Length; i++)
         {
-            // Text_MeshOptions[i].text = SphereStateManager.Instance.MeshStates[CurrentSelectedId][i].name;
-            Text_MeshOptions[i].text = "Mesh " + i;
+            Img_MeshOptions[i].sprite = SphereStateManager.Instance.MeshIconStates[CurrentSelectedId][i];
         }
     }
     

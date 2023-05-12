@@ -5,6 +5,7 @@ public class SphereStateManager : MonoBehaviour
     public static SphereStateManager Instance { get; private set; }
 
     [HideInInspector] public Mesh[][] MeshStates = new Mesh[4][];
+    [HideInInspector] public Sprite[][] MeshIconStates = new Sprite[4][];
     [HideInInspector] public Material[][] MaterialStates = new Material[4][];
     [HideInInspector] public bool[] HasCompositeStates = new bool[4];
     private int[] materialIndices = new int[4];
@@ -27,6 +28,7 @@ public class SphereStateManager : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             MeshStates[i] = new Mesh[0];
+            MeshIconStates[i] = new Sprite[0];
             MaterialStates[i] = new Material[0];
             HasCompositeStates[i] = false;
         }
@@ -42,6 +44,15 @@ public class SphereStateManager : MonoBehaviour
         return MeshStates[sphereIdentifier];
     }
 
+    public void SetMeshIcons(int sphereIdentifier, Sprite[] sprites)
+    {
+        MeshIconStates[sphereIdentifier] = sprites;
+    }
+    public Sprite[] GetMeshIcons(int sphereIdentifier)
+    {
+        return MeshIconStates[sphereIdentifier];
+    }
+    
     public void SetMaterialStates(int sphereIdentifier, Material[] materials)
     {
         MaterialStates[sphereIdentifier] = materials;

@@ -8,7 +8,7 @@ namespace Script
     {
         public static IdlePanel Instance { get; private set; }
         [SerializeField] private GameObject GO_IdlePanel;
-        [SerializeField] private TMP_Text Text_NextLevel;
+        // [SerializeField] private TMP_Text Text_NextLevel;
         private void Awake()
         {
             if (Instance == null)
@@ -36,7 +36,7 @@ namespace Script
             if (newState == UIState.Idle)
             {
                 GO_IdlePanel.gameObject.SetActive(true);
-                Text_NextLevel.text = "To " + LevelSwitcher.Instance.GetNextLevelName();
+                // Text_NextLevel.text = "To " + LevelSwitcher.Instance.GetNextLevelName();
             }
             else if (newState == UIState.Modifying)
             {
@@ -48,7 +48,7 @@ namespace Script
         public void OnClickSwitchLevel()
         {
             LevelSwitcher.Instance.SwitchLevel();
-            Text_NextLevel.text = "To " + LevelSwitcher.Instance.GetNextLevelName();
+            // Text_NextLevel.text = "To " + LevelSwitcher.Instance.GetNextLevelName();
             // UIStateManger.Instance.ChangeState(UIState.Idle);
         }
     }

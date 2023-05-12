@@ -8,7 +8,7 @@ namespace Script
         public static PlayerMovementController Instance;
         public Transform[] modificationPoints;
         private float movementSpeed = 5f;
-        private float rotationSpeed = 8f;
+        private float rotationSpeed = 10f;
 
         private int currentPointIndex = 0;
         private bool isMoving = false;
