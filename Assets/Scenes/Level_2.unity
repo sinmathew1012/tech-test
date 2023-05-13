@@ -132,7 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 308616287849452714, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_Name
-      value: Sphere (3)
+      value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
+      propertyPath: sphereId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: DefaultMesh
@@ -286,7 +290,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 308616287849452714, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_Name
-      value: Sphere (5)
+      value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
+      propertyPath: sphereId
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: DefaultMesh
@@ -355,7 +363,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 308616287849452714, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_Name
-      value: Sphere (4)
+      value: Sphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
+      propertyPath: sphereId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: DefaultMesh
@@ -424,7 +436,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 308616287849452714, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_Name
-      value: Sphere (2)
+      value: Sphere
       objectReference: {fileID: 0}
     - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: DefaultMesh

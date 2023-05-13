@@ -132,7 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 308616287849452714, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_Name
-      value: Selectable
+      value: Sphere 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
+      propertyPath: sphereId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: sphereIdentifier
@@ -263,8 +267,8 @@ Transform:
   - {fileID: 589630676}
   - {fileID: 718773924}
   - {fileID: 786297722}
-  - {fileID: 2111061734}
   - {fileID: 1662864599}
+  - {fileID: 2111061734}
   - {fileID: 823274865}
   - {fileID: 902390998}
   - {fileID: 1160114974}
@@ -922,7 +926,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 308616287849452714, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_Name
-      value: Selectable
+      value: Sphere 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
+      propertyPath: sphereId
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: sphereIdentifier
@@ -983,7 +991,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 308616287849452714, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_Name
-      value: Selectable
+      value: Sphere 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
+      propertyPath: sphereId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 308616287849452717, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: sphereIdentifier
@@ -1300,7 +1312,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 308616287849452714, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_Name
-      value: Selectable
+      value: Sphere
       objectReference: {fileID: 0}
     - target: {fileID: 308616287849452718, guid: e8202d3c3aef84412ab9866b1f0f49f7, type: 3}
       propertyPath: m_RootOrder

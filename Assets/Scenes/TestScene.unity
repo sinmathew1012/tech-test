@@ -9839,7 +9839,6 @@ GameObject:
   - component: {fileID: 410376233}
   - component: {fileID: 410376236}
   - component: {fileID: 410376234}
-  - component: {fileID: 410376235}
   m_Layer: 0
   m_Name: DontDestoryOnLoad
   m_TagString: Untagged
@@ -9883,19 +9882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdbfb56c58bc46eebaae8296505638ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HasCompositeStates: 00000000
---- !u!114 &410376235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410376231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25649122775a4125b18079e7f663eb11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &410376236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9908,10 +9894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8465206a880438fa6724a3954bcc2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelNames:
-  - Level_1
-  - Level_2
-  CurrentLevelIndex: 0
 --- !u!1001 &411982701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11598,7 +11580,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 472387309}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -23992,7 +23974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7be048d0b35640d281b6d9ea4fc80609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelViewPointGroup:
+  levelViewPointGroup:
   - {fileID: 914428477}
   - {fileID: 1989532928}
 --- !u!1001 &963543017
@@ -43229,8 +43211,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2025954759}
-        m_TargetAssemblyTypeName: Script.IdlePanel, Assembly-CSharp
+      - m_Target: {fileID: 2025954758}
+        m_TargetAssemblyTypeName: UIPanel, Assembly-CSharp
         m_MethodName: OnClickSwitchLevel
         m_Mode: 1
         m_Arguments:
@@ -50505,7 +50487,6 @@ GameObject:
   - component: {fileID: 2025954757}
   - component: {fileID: 2025954756}
   - component: {fileID: 2025954755}
-  - component: {fileID: 2025954759}
   - component: {fileID: 2025954758}
   m_Layer: 5
   m_Name: Canvas
@@ -50610,7 +50591,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e5e26547c0a64a2bb47fe3616d25ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentSelectedId: 0
+  levelManager: {fileID: 410376236}
+  GO_IdlePanel: {fileID: 1281672063}
   GO_ModificationPanel: {fileID: 388096768}
   Img_MaterialOptions:
   - {fileID: 467038383}
@@ -50622,19 +50604,6 @@ MonoBehaviour:
   - {fileID: 292302725}
   - {fileID: 1977692895}
   - {fileID: 189520811}
---- !u!114 &2025954759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025954753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 532aee19132146df937aecd1842bce09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GO_IdlePanel: {fileID: 1281672063}
 --- !u!1001 &2029164381
 PrefabInstance:
   m_ObjectHideFlags: 0
