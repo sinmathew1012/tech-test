@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Script
@@ -6,13 +7,11 @@ namespace Script
     {
         public static IdlePanel Instance { get; private set; }
         [SerializeField] private GameObject GO_IdlePanel;
-        // [SerializeField] private TMP_Text Text_NextLevel;
         private void Awake()
         {
             if (Instance == null)
             {
                 Instance = this;
-                // DontDestroyOnLoad(gameObject);
             }
             else
             {
@@ -31,23 +30,22 @@ namespace Script
 
         private void HandleUIStateChanged(UIState newState)
         {
-            if (newState == UIState.Idle)
+            switch (newState)
             {
-                GO_IdlePanel.gameObject.SetActive(true);
-                // Text_NextLevel.text = "To " + LevelSwitcher.Instance.GetNextLevelName();
-            }
-            else if (newState == UIState.Modifying)
-            {
-                GO_IdlePanel.gameObject.SetActive(false);
-
+                case UIState.Idle:
+                    GO_IdlePanel.gameObject.SetActive(true);
+                    break;
+                case UIState.Modifying:
+                    GO_IdlePanel.gameObject.SetActive(false);
+                    break;
+                default:
+                    break;
             }
         }
         
         public void OnClickSwitchLevel()
         {
             LevelManager.Instance.SwitchLevel();
-            // Text_NextLevel.text = "To " + LevelSwitcher.Instance.GetNextLevelName();
-            // UIStateManger.Instance.ChangeState(UIState.Idle);
         }
     }
 }
