@@ -1,7 +1,7 @@
 # tech-test
 
 <h2>Build</h2>
-Play the game using build hosted in Github page [here](https://github.com/sinmathew1012/tech-test-bulid/deployments/activity_log?environment=github-pages)
+Play the game using build hosted in Github page [here](https://sinmathew1012.github.io/tech-test-bulid/)
 <br>
 <h2>How To Play</h2>
 Wide position - Idle State <br>
