@@ -1,5 +1,3 @@
-using System.Collections;
-using TMPro;
 using UnityEngine;
 
 namespace Script
@@ -47,7 +45,7 @@ namespace Script
         
         public void OnClickSwitchLevel()
         {
-            LevelSwitcher.Instance.SwitchLevel();
+            LevelManager.Instance.SwitchLevel();
             // Text_NextLevel.text = "To " + LevelSwitcher.Instance.GetNextLevelName();
             // UIStateManger.Instance.ChangeState(UIState.Idle);
         }

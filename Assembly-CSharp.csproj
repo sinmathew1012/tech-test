@@ -43,15 +43,16 @@
   <ItemGroup>
      <Compile Include="Assets/Script/PlayerRaycastController.cs" />
      <Compile Include="Assets/Script/SphereController.cs" />
-     <Compile Include="Assets/Script/LevelSwitcher.cs" />
      <Compile Include="Assets/Script/PlayerMovementController.cs" />
      <Compile Include="Assets/Script/ModificationPanel.cs" />
      <Compile Include="Assets/Script/SphereStateManager.cs" />
      <Compile Include="Assets/Script/UIStateManger.cs" />
      <Compile Include="Assets/Script/IdlePanel.cs" />
+     <Compile Include="Assets/Script/LevelManager.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+     <None Include="Assets/StreamingAssets/UnityServicesProjectConfiguration.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />

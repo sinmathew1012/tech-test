@@ -6,9 +6,11 @@ namespace Script
     public class PlayerMovementController : MonoBehaviour
     {
         public static PlayerMovementController Instance;
-        public Transform[] modificationPoints;
-        private float movementSpeed = 5f;
-        private float rotationSpeed = 10f;
+        // public Transform IdlePosition;
+        public Transform[][] modificationPoints;
+        public GameObject[] LevelViewPointGroup;
+        private float movementSpeed = 10f;
+        private float rotationSpeed = 15f;
 
         private int currentPointIndex = 0;
         private bool isMoving = false;
@@ -29,8 +31,19 @@ namespace Script
 
         private void Start()
         {
-            transform.position = modificationPoints[currentPointIndex].position;
-            transform.rotation = modificationPoints[currentPointIndex].rotation;
+            modificationPoints = new Transform[LevelManager.Instance.levelNames.Length][];
+            for (int i = 0; i < LevelViewPointGroup.Length; i++)
+            {
+                Transform[] viewPointsPerLevel = LevelViewPointGroup[i].GetComponentsInChildren<Transform>();
+                modificationPoints[i] = new Transform[viewPointsPerLevel.Length];
+                for (int j = 1; j < viewPointsPerLevel.Length; j++)
+                {
+                    modificationPoints[i][j-1] = viewPointsPerLevel[j];
+                }
+            }
+            
+            transform.position = modificationPoints[0][0].position;
+            transform.rotation = modificationPoints[0][0].rotation;
         }
 
         private void Update()
@@ -42,23 +55,15 @@ namespace Script
         }
         public void TriggerMoveCamera(int toPointIndex)
         {
-            // if (!isMoving)
-            // {
-                // currentPointIndex++;
-                currentPointIndex = toPointIndex;
-                // if (currentPointIndex >= modificationPoints.Length)
-                // {
-                //     currentPointIndex = 0;
-                // }
-
-                isMoving = true;
-            // }
+            currentPointIndex = toPointIndex;
+            isMoving = true;
         }
 
         public void MoveCamera()
         {
-            Vector3 targetPosition = modificationPoints[currentPointIndex].position;
-            Quaternion targetRotation = modificationPoints[currentPointIndex].rotation;
+            var levelIndex = LevelManager.Instance.CurrentLevelIndex;
+            Vector3 targetPosition = modificationPoints[levelIndex][currentPointIndex].position;
+            Quaternion targetRotation = modificationPoints[levelIndex][currentPointIndex].rotation;
 
             transform.position =
                 Vector3.MoveTowards(transform.position, targetPosition, movementSpeed * Time.deltaTime);

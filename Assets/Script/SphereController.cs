@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Security.Cryptography;
 using UnityEditor;
 using UnityEngine;
@@ -37,6 +38,7 @@ public class SphereController : MonoBehaviour
         _meshFilter = GetComponent<MeshFilter>();
         if (!_sphereStateManager.GetHasCompositeState(sphereIdentifier))
         {
+            RandomAdditionalMaterialsAndMeshes();
             CompositeMaterialsAndMeshes();
             _sphereStateManager.SetMaterialStates(sphereIdentifier, materials);
             _sphereStateManager.SetMeshStates(sphereIdentifier, meshes);
@@ -58,13 +60,32 @@ public class SphereController : MonoBehaviour
         modificationPanel.OnMeshOptionClicked += ChangeMesh;
         
     }
-
     private void OnDestroy()
     {
         modificationPanel.OnMaterialOptionClicked -= ChangeMaterial;
         modificationPanel.OnMeshOptionClicked -= ChangeMesh;
     }
+    
+    private void RandomAdditionalMaterialsAndMeshes()
+    {
+        // Fisher-yiates shuffle on AdditionalMeshes[], icons and materials update accordingly
+        var random = new System.Random();
+        for (int i = AdditionalMeshes.Length - 1; i > 0; i--)
+        {
+            int j = random.Next(i + 1);
+            Material tempMaterial = AdditionalMaterials[i];
+            AdditionalMaterials[i] = AdditionalMaterials[j];
+            AdditionalMaterials[j] = tempMaterial;
+            
+            Mesh tempMesh = AdditionalMeshes[i];
+            AdditionalMeshes[i] = AdditionalMeshes[j];
+            AdditionalMeshes[j] = tempMesh;
 
+            Sprite tempIcon = AdditionalMeshIcons[i];
+            AdditionalMeshIcons[i] = AdditionalMeshIcons[j];
+            AdditionalMeshIcons[j] = tempIcon;
+        }
+    }
     private void CompositeMaterialsAndMeshes()
     {
         int numMaterials = 1 + AdditionalMaterials.Length;
