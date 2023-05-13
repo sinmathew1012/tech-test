@@ -56,7 +56,7 @@ namespace TechnicalTest.Manager
             }
             
             /*
-             * GC collect after scene load to redcue memory usage
+             * GC after scene load to redcue memory usage
              */
             Resources.UnloadUnusedAssets();
             

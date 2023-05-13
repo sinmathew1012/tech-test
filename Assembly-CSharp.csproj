@@ -49,6 +49,7 @@
      <Compile Include="Assets/TechnicalTest/Manager/SphereDataManager.cs" />
      <Compile Include="Assets/TechnicalTest/Manager/PlayerStateManager.cs" />
      <Compile Include="Assets/TechnicalTest/Manager/SphereData.cs" />
+     <None Include="Assets/StreamingAssets/UnityServicesProjectConfiguration.json" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
