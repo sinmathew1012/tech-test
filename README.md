@@ -5,14 +5,14 @@ Play the game using build hosted in Github page [here](https://github.com/sinmat
 <br>
 <h2>How To Play</h2>
 Wide position - Idle State <br>
-<img width="800" alt="Screenshot 2023-05-13 at 11 15 21 PM" src="https://github.com/sinmathew1012/tech-test/assets/106396372/1cfa005f-c018-4a4b-8656-b63b89859cd3"><br>
+<img width="800" alt="Screenshot 2023-05-13 at 11 15 21 PM" src="https://github.com/sinmathew1012/tech-test/blob/main/readme_ref/Screenshot%202023-05-13%20at%2011.15.21%20PM.png"><br>
 
 Zoom-in position - Modification State<br>
-<img width="800" alt="Screenshot 2023-05-13 at 11 21 38 PM" src="https://github.com/sinmathew1012/tech-test/assets/106396372/902ac532-b4a5-498c-ace6-a6c8516a28c5"><br>
+<img width="800" alt="Screenshot 2023-05-13 at 11 21 38 PM" src="https://github.com/sinmathew1012/tech-test/blob/main/readme_ref/Screenshot%202023-05-13%20at%2011.21.38%20PM.png"><br>
 
 
 <h2>Level editing</h2>
-<img width="800" alt="Screenshot 2023-05-13 at 10 56 35 PM" src="https://github.com/sinmathew1012/tech-test/assets/106396372/1e19a59b-f9a7-44bc-a691-87d756c2b513"></img>
+<img width="800" alt="Screenshot 2023-05-13 at 10 56 35 PM" src="https://github.com/sinmathew1012/tech-test/blob/main/readme_ref/Screenshot%202023-05-13%20at%2010.56.35%20PM.png"></img>
 
 Artist define material and mesh options here in the level scene. 
   - Default - first loaded together with the level. 
