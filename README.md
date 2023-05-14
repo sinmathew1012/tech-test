@@ -47,13 +47,13 @@ Nicer 3D scene - 2hour <br>
 Optimize the performance  <br>
 LOD - 20mins <br>
 Static-batch - 10mins <br>
-GPU-Instancing - 4 hours <br>
-Baked Lightmap - 2 hours  <br>
+GPU-Instancing - 1hour<br>
+Baked Lightmap (non-used) - 4 hours  <br>
 Garbage collect, reduce memory usage - 30mins <br>
  <br>
-Reduction of packaged size to minimum <br>
+Reduction of packaged size to minimum - 1 hour <br>
 Texture compression (DXT is the best) - 1 hour <br>
-Remove TMP textures, use smaller size graphics - 1hours <br>
+Remove TMP textures, use smaller size graphics - 1hour <br>
  <br>
 ——————————Maintains———————————— <br>
 Cleanup and comments in code - 4 hours <br>
