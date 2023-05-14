@@ -47,7 +47,8 @@ Nicer 3D scene - 2hour <br>
 Optimize the performance  <br>
 LOD - 20mins <br>
 Static-batch - 10mins <br>
-Baked Lightmap (failed) - 2 hours  <br>
+GPU-Instancing - 4 hours <br>
+Baked Lightmap - 2 hours  <br>
 Garbage collect, reduce memory usage - 30mins <br>
  <br>
 Reduction of packaged size to minimum <br>
