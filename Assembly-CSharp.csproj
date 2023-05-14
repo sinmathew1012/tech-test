@@ -43,12 +43,12 @@
   <ItemGroup>
      <Compile Include="Assets/TechnicalTest/CameraController/CameraRaycastController.cs" />
      <Compile Include="Assets/TechnicalTest/Sphere.cs" />
+     <Compile Include="Assets/TechnicalTest/Manager/SphereData.cs" />
      <Compile Include="Assets/TechnicalTest/Manager/LevelManager.cs" />
      <Compile Include="Assets/TechnicalTest/CameraController/CameraMovementController.cs" />
      <Compile Include="Assets/TechnicalTest/UIPanel.cs" />
      <Compile Include="Assets/TechnicalTest/Manager/SphereDataManager.cs" />
      <Compile Include="Assets/TechnicalTest/Manager/PlayerStateManager.cs" />
-     <Compile Include="Assets/TechnicalTest/Manager/SphereData.cs" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -709,9 +709,6 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
      <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEditor.UI">
      <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
      </Reference>
@@ -724,8 +721,8 @@
      <Reference Include="UnityEngine.SpatialTracking">
      <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
      <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
@@ -735,6 +732,9 @@
      </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
      <HintPath>/Users/mathewsin/Documents/GitRepository/tech-test/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>

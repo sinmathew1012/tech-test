@@ -145,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 219
+        y: 92
         width: 42
         height: 118
       alignment: 0
@@ -165,8 +165,8 @@ TextureImporter:
       name: tech-test_ui_0001_Group-2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 3
+        x: 165
+        y: 78
         width: 50
         height: 50
       alignment: 0
@@ -183,55 +183,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tech-test_ui_0002_Rectangle-1-copy
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 228
-        width: 80
-        height: 27
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17c6b75f6defc497bb439d13d04a6827
-      internalID: -1634068023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tech-test_ui_0003_Rectangle-1
-      rect:
-        serializedVersion: 2
-        x: 127
-        y: 257
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5d041a38c5a34b1786f1d68a746c57a
-      internalID: -121089662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tech-test_ui_0004_Layer-2
       rect:
         serializedVersion: 2
         x: 1
-        y: 426
-        width: 480
-        height: 85
+        y: 212
+        width: 240
+        height: 43
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -246,32 +204,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tech-test_ui_0005_Layer-1
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 339
-        width: 480
-        height: 85
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa1ab649e76464215a8b53cbb9d9a6e7
-      internalID: -172023497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tech-test_ui2_0000_Group-3-copy-3
       rect:
         serializedVersion: 2
         x: 1
-        y: 137
+        y: 10
         width: 80
         height: 80
       alignment: 0
@@ -292,7 +229,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 257
+        y: 130
         width: 80
         height: 80
       alignment: 0
@@ -312,8 +249,8 @@ TextureImporter:
       name: tech-test_ui2_0002_Group-3-copy
       rect:
         serializedVersion: 2
-        x: 1
-        y: 55
+        x: 83
+        y: 48
         width: 80
         height: 80
       alignment: 0
@@ -333,8 +270,8 @@ TextureImporter:
       name: tech-test_ui2_0003_Group-3
       rect:
         serializedVersion: 2
-        x: 83
-        y: 146
+        x: 127
+        y: 130
         width: 80
         height: 80
       alignment: 0
@@ -363,12 +300,9 @@ TextureImporter:
     nameFileIdTable:
       tech-test_ui2_0000_Group-3-copy-3: -1197117073
       tech-test_ui_0001_Group-2: 219674923
-      tech-test_ui_0003_Rectangle-1: -121089662
       tech-test_ui_0004_Layer-2: 523514831
       tech-test_ui2_0002_Group-3-copy: -644951775
-      tech-test_ui_0005_Layer-1: -172023497
       tech-test_ui2_0001_Group-3-copy-2: -1693343956
-      tech-test_ui_0002_Rectangle-1-copy: -1634068023
       tech-test_ui_0000_Layer-5: 699992632
       tech-test_ui2_0003_Group-3: 907552129
   spritePackingTag: 
